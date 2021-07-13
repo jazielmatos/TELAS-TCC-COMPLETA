@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:visibility="visible" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/irreghead"
+        android:translationZ="90dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#00000000"
+        android:src="@drawable/microondas"
+        android:translationZ="100dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/barra_selecionadora"
+
+
+            />
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/estilo_medir"
+        android:text="MEDIR"
+        android:textColor="#24A57C"
+        android:textSize="30dp" />
+
+
+    <!-- CAIXA COM ITENS DE MEDIÇÃO (DINHEIRO E TEMPO) -->
+    <FrameLayout
+        android:layout_width="180dp"
+        android:layout_height="140dp"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/estilo_inicial_info">
+
+        <!-- ULTIMA MEDIÇÃO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:fontFamily="@font/abeezee"
+            android:text="Ultima Medição"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <!--DATA ULTIMA MEDIÇÃO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/abeezee"
+            android:text="24/05/2021"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+
+        <!-- TEMPO -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/estilo_inicial_info"
+                android:fontFamily="@font/abeezee"
+                android:padding="5dp"
+                android:text="15 h 52 min"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/simbolo_relogio" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/simbolo_dinheiro" />
+        <!-- DINHEIRO -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/estilo_inicial_info"
+                android:fontFamily="@font/abeezee"
+                android:padding="5dp"
+                android:text="8,25"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!-- ESTILO CAIXA DE BAIXO -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/estilo_app_bar_botton" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white" />
+
+
+    </FrameLayout>
+
+    <!-- CAIXA COM OS BOTÕES DE BAIXO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="82dp"
+            android:background="@drawable/btn_historico" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/btn_medir"
+            android:foregroundGravity="bottom" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="82dp"
+            android:background="@drawable/btn_config" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
